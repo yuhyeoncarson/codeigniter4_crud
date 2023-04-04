@@ -8,7 +8,7 @@ class Users extends BaseController
 {
     // Create
     public function addUser(){
-        return view('add_page');
+        return view('users/add_page');
     }
     
     public function create() {
@@ -30,7 +30,7 @@ class Users extends BaseController
 
         $data['users'] = $model->findAll();
 
-        return view('board', $data);
+        return view('users/board', $data);
     }
  
     // Update
@@ -39,7 +39,7 @@ class Users extends BaseController
 
         $data['user_list'] = $model->where('id', $id)->first();
         
-        return view('edit_page', $data);
+        return view('users/edit_page', $data);
     }
  
     public function update(){
